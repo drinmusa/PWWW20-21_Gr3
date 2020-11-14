@@ -184,10 +184,16 @@ body {
     background-color: #97455F;
     color: #FFFFFF;
     border: none;
-    margin-left: -2px;
+    margin-left: -4px;
     padding: 10px;
     border-top-right-radius: 5px;
     border-top-left-radius: 0px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 0px;
+}
+
+.main-footer {
+    background-color: #EBEBEB;
+    padding: 22px 0px;
+    border-top: 1px solid #a5a5a5;
 }
