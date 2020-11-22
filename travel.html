@@ -98,11 +98,22 @@
               </div>
             </div>
 
+            <div class="slider-display-container mySlides">
+              <img src="images/travel_tour_img/travel-img-03.jpg" class="" alt="">
+              <div class="slider-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                <h1 class="slider-title">Lorem ipsum generator</h1>
+                <p class="slider-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+              </div>
+            </div>
+
             <div class="w3-container w3-large w3-text-white slider-display-bottommiddle" style="width:100%">
               <span class="slider-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
               <span class="slider-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
               <span class="slider-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
             </div>
+
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
         </div>
       </section>
@@ -136,31 +147,55 @@
   <!-- SLIDER -->
   <script>
     var slideIndex = 1;
-    showDivs(slideIndex);
+    showSlides(slideIndex);
     
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
     }
     
     function currentDiv(n) {
-      showDivs(slideIndex = n);
+      showSlides(slideIndex = n);
     }
     
-    function showDivs(n) {
+    function showSlides(n) {
       var i;
-      var x = document.getElementsByClassName("mySlides");
+      var slides = document.getElementsByClassName("mySlides");
       var dots = document.getElementsByClassName("demo");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
       }
       for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-white", "");
+          dots[i].className = dots[i].className.replace(" w3-white", "");
       }
-      x[slideIndex-1].style.display = "block";  
+      slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " w3-white";
     }
-  </script>
+    </script>
+    
+    <!-- SLIDER AUTO-CHANGE -->
+    <script>
+      var slideIndexe = 0;
+      showDives();
+      
+      function showDives() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var y = document.getElementsByClassName("demo");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        slideIndexe++;
+        if (slideIndexe > x.length) {slideIndexe = 1}    
+        for (i = 0; i < y.length; i++) {
+          y[i].className = y[i].className.replace(" w3-white", "");
+        }
+        x[slideIndexe-1].style.display = "block";  
+        y[slideIndexe-1].className += "  w3-white";
+        setTimeout(showDives, 4000); // Change image every 4 seconds
+      }
+      </script>
+    
   
 </html>
