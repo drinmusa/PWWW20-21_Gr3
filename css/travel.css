@@ -376,3 +376,67 @@ body {
 .boxsubmit:hover{
     background-color:#88394D ;
 }
+.qode-tour-item-inner{
+    box-shadow: 0 4px 30.08px 1.92px rgba(80,78,78,.15);
+    position: relative;
+    left: 0%;
+    width: 28%;
+    top: auto;
+}
+.qode-tours-standard-item-content-inner {
+    padding: 26px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.qode-tour-item{
+    display: flex;
+    width: 1140px;
+    margin: 100px auto;
+}
+
+.qode-tour-item-inner-block{
+    padding: 20px;
+    margin-top: 100px;
+    background: #97455F;
+}
+.qode-tour-item-inner-tittle{
+    display: flex;
+}
+.qode-tour-item-inner-tittle a{
+    color: #313131;
+    font-size: 15px;
+    line-height: 27px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    text-decoration: none;
+   
+    
+}
+
+.qode-tour-item-inner-tittle, a:hover{
+    color:#e54b4b;
+}
+.qode-tours-item-discount-price{
+    padding: 18px;
+}
+.qode-single-rating-value{
+    color: #313131;
+}
+.fa-clock{
+    padding: 0; 
+    color: white;
+}
+.qode-tour-info-label{
+    color: #fff;
+    padding: 5px;
+}
+.fa-user{
+    color: #fff;
+    padding-left: 10px;
+}
+.fa-map-marker-alt{
+    color: #fff;
+    padding-left: 10px;
+}
