@@ -340,6 +340,9 @@ body {
     margin: 0;
     width: 50%;
 }
+.fa-map-marker-alt-black{
+    color: black;
+}
 
 .search-travel-container{
     margin: 0 auto;
@@ -347,7 +350,7 @@ body {
 }
 
 .search-white-box{
-    margin-left: 38px;
+    padding-left: 38px;
 }
 
 
@@ -396,11 +399,12 @@ body {
 
 .qode-tour-item-inner-block{
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 20px;
     background: #97455F;
 }
 .qode-tour-item-inner-tittle{
-    display: flex;
+    display:inline-flex;
+    margin-bottom: -20px;
 }
 .qode-tour-item-inner-tittle a{
     color: #313131;
@@ -439,4 +443,15 @@ body {
 .fa-map-marker-alt{
     color: #fff;
     padding-left: 10px;
+}
+.qode-tour-item-rate-paragraph{
+    padding-left: 15px;
+    color: darkgray;
+}
+.qode-tour-item-paragraph{
+    margin-top: 20px;
+}
+.qode-tour-item-paragraph-p{
+    padding-left: 15px;
+    color: darkgray;
 }

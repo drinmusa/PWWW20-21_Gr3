@@ -120,11 +120,11 @@
 
       <section class="search-travel" >
         <div class="search-travel-container">
-          <div class="search-white-box" style="display: inline-flex;">
-            <div class="whereTo-box"> 
-               <input type="text" value=""  name="destination" placeholder="Where to?" style="width: 260px; height: 60px;cursor: pointer; background-color: #F1EAE9; border-style: none; outline: none; position:relative; padding: 10px 15px;"/>
-              <!-- <i class="fas fa-map-marker-alt"></i>!-->
-            </div>
+          <form method=" " action=" " autocomplete="off" name="form_search"> 
+            <div class="search-white-box" style="display: inline-flex;">
+              <div class="whereTo-box"> 
+                <input type="text" value=""  name="destination" placeholder="Where to?" style="width: 260px; height: 60px;cursor: pointer; background-color: #F1EAE9; border-style: none; outline: none; position:relative; padding: 10px 15px;"/>
+              </div>
                   <div class="month-box">
                     <select class="month" name="month" style="width: 260px; height: 60px; cursor: pointer; background-color: #F1EAE9; border-style: none; outline: none; margin-left: 20px; position:relative; padding:10px 15px; color: gray;">
                       <option value="">Month</option>
@@ -142,80 +142,96 @@
                       <option value="12">December</option>
                     </select>
                   </div>
-
-            <div class="travel-type-box">
-              <select class="type" name="type"  style="width: 260px; height: 60px;cursor: pointer; background-color: #F1EAE9; border-style: none; outline: none; margin-left: 20px; position:relative; padding:10px 15px; color: gray;">
-                <option value="">Travel Type</option>
-                <option value="air-rides">Air Rides</option>
-                <option value="beaches">Beaches</option>
-                <option value="city-sightseeing">City Sightseeing</option>
-                <option value="hiking-adventures">Hiking Adventures</option>
-                <option value="historical-buildings">Historical Buildings</option>
-                <option value="meals-included">Meals Included</option>
-                <option value="musem-tours">Musem Tours</option>
-                <option value="romantic">Romantic</option>
-                <option value="spiritual-voyage">Spiritual Voyage</option>
-                <option value="theater-festival">Theater Festival</option>
-                <option value="vespa-rides">Vespa Rides</option>
-              </select> 
-            </div>  
-            <div class="box-submit">
-              <button type="submit" value="submit" class="boxsubmit" >Find now</button>
-            </div>
-          </div>  
+              <div class="travel-type-box">
+                <select class="type" name="type"  style="width: 260px; height: 60px;cursor: pointer; background-color: #F1EAE9; border-style: none; outline: none; margin-left: 20px; position:relative; padding:10px 15px; color: gray;">
+                  <option value="">Travel Type</option>
+                  <option value="air-rides">Air Rides</option>
+                  <option value="beaches">Beaches</option>
+                  <option value="city-sightseeing">City Sightseeing</option>
+                  <option value="hiking-adventures">Hiking Adventures</option>
+                  <option value="historical-buildings">Historical Buildings</option>
+                  <option value="meals-included">Meals Included</option>
+                  <option value="musem-tours">Musem Tours</option>
+                  <option value="romantic">Romantic</option>
+                  <option value="spiritual-voyage">Spiritual Voyage</option>
+                  <option value="theater-festival">Theater Festival</option>
+                  <option value="vespa-rides">Vespa Rides</option>
+                </select> 
+              </div>  
+                  <div class="box-submit">
+                     <button type="submit" value="submit" class="boxsubmit" >Find now</button>
+                  </div>
+             </div>  
+           </form>
         </div>
   </section>
 
   <section class="choisse-container">
-        
-            <div class="qode-tour-item" style="display: flex;">
-                <div class="qode-tour-item-inner">
-                  <a href="tour.html"><img src="images/travel_tour_img/wedding-img.jpg" style="width: 100%; height: auto;"/></a>
-                    <div class="qode-tour-item-inner-tittle">
-                        <h4><a href="/" style="padding: 15px;">DESTINATION WEDDING</a></h4>
-                        <span class="qode-tours-item-discount-price">$345</span>
-                    </div> 
-                   <div class="qode-tour-item-inner-block">
-                      <i class="far fa-clock"></i>
-                      <span class="qode-tour-info-label">10 Days</span>
-                      <i class="fas fa-user"></i>
-                      <span class="qode-tour-info-label">12+</span>
-                      <i class="fas fa-map-marker-alt"></i>
-                      <span class="qode-tour-info-label">Cypro</span>
-                    </div>
-                </div>
-               <div class="qode-tour-item-inner" style="margin-left: 90px;">
-                  <a href="tour.html"><img src="images/travel_tour_img/south-africa.jpg" style="width: 100%; height: auto;"/></a>
-                  <div class="qode-tour-item-inner-tittle">
-                    <h4><a href="/" style="padding: 15px;">SOUTH AMERICA ICONS</a></h4>
-                    <span class="qode-tours-item-discount-price">$675</span>
-                </div> 
-                <div class="qode-tour-item-inner-block">
-                      <i class="far fa-clock"></i>
-                      <span class="qode-tour-info-label">10 Days</span>
-                      <i class="fas fa-user"></i>
-                      <span class="qode-tour-info-label">12+</span>
-                      <i class="fas fa-map-marker-alt"></i>
-                      <span class="qode-tour-info-label">Peru</span>
-                </div>
-               </div>
-               <div class="qode-tour-item-inner" style="margin-left: 90px;">
-                <a href="tour.html"><img src="images/travel_tour_img/cuban-city.jpg" style="width: 100%; height: auto;"/></a>
-                <div class="qode-tour-item-inner-tittle">
-                  <h4><a href="/" style="padding: 15px;">CUBA ADVENTURE</a></h4>
-                  <span class="qode-tours-item-discount-price">$630</span>
+    <div class="qode-tour-item" style="display: flex; justify-content: space-between;">
+        <div class="qode-tour-item-inner">
+          <a href="tour.html"><img src="images/travel_tour_img/wedding-img.jpg" style="width: 100%; height: 209px;"/></a>
+            <div class="qode-tour-item-inner-tittle">
+                  <h4><a href="/" style="padding: 15px;">DESTINATION WEDDING</a></h4>
+                  <span class="qode-tours-item-discount-price">$345</span>
+            </div>
+                  <div class="qode-tour-item-rate">
+                      <p class="qode-tour-item-rate-paragraph">8.0 Superb</p>
+                  </div> 
+                      <div class="qode-tour-item-paragraph">
+                          <p class="qode-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
+                      </div>
+                        <div class="qode-tour-item-inner-block">
+                          <i class="far fa-clock"></i>
+                          <span class="qode-tour-info-label">10 Days</span>
+                          <i class="fas fa-user"></i>
+                          <span class="qode-tour-info-label">12+</span>
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span class="qode-tour-info-label">Cypro</span>
+                        </div>
+        </div>
+        <div class="qode-tour-item-inner">
+          <a href="tour.html"><img src="images/travel_tour_img/south-africa.jpg" style="width: 100%; height: 209px;"/></a>
+              <div class="qode-tour-item-inner-tittle">
+                   <h4><a href="/" style="padding: 15px;">SOUTH AMERICA ICONS</a></h4>
+                   <span class="qode-tours-item-discount-price">$675</span>
               </div> 
-              <div class="qode-tour-item-inner-block">
-                      <i class="far fa-clock"></i>
-                      <span class="qode-tour-info-label">10 Days</span>
-                      <i class="fas fa-user"></i>
-                      <span class="qode-tour-info-label">12+</span>
-                      <i class="fas fa-map-marker-alt"></i>
-                      <span class="qode-tour-info-label">Cuba</span>
-              </div>
-             </div>
-            </div>  
-       
+                  <div class="qode-tour-item-rate">
+                      <p class="qode-tour-item-rate-paragraph">7.7 Superb</p>
+                  </div> 
+                      <div class="qode-tour-item-paragraph">
+                          <p class="qode-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
+                      </div>
+                         <div class="qode-tour-item-inner-block">
+                            <i class="far fa-clock"></i>
+                            <span class="qode-tour-info-label">10 Days</span>
+                            <i class="fas fa-user"></i>
+                            <span class="qode-tour-info-label">12+</span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="qode-tour-info-label">Peru</span>
+                         </div>
+          </div>
+          <div class="qode-tour-item-inner">
+              <a href="tour.html"><img src="images/travel_tour_img/cuban-city.jpg" style="width: 100%; height:209px;"/></a>
+                 <div class="qode-tour-item-inner-tittle">
+                    <h4><a href="/" style="padding: 15px;">CUBA ADVENTURE</a></h4>
+                    <span class="qode-tours-item-discount-price" style="padding-left: 60px;">$630</span>
+                  </div> 
+                      <div class="qode-tour-item-rate">
+                         <p class="qode-tour-item-rate-paragraph">8.0 Superb</p>
+                      </div> 
+                          <div class="qode-tour-item-paragraph">
+                              <p class="qode-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
+                          </div>
+                              <div class="qode-tour-item-inner-block">
+                                <i class="far fa-clock"></i>
+                                <span class="qode-tour-info-label">10 Days</span>
+                                <i class="fas fa-user"></i>
+                                <span class="qode-tour-info-label">12+</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="qode-tour-info-label">Cuba</span>
+                              </div>
+           </div>
+     </div>       
   </section>
     </main>
     <footer class="main-footer">
