@@ -78,6 +78,7 @@
         <span class="header-space"></span>
       </div>
     </header>
+
     <main>
       <section class="main-slider">
         <div class="container">          
@@ -121,12 +122,15 @@
       <section class="search-travel" >
         <div class="search-travel-container">
           <form method=" " action=" " autocomplete="off" name="form_search"> 
-            <div class="search-white-box" style="display: inline-flex;">
-              <div class="whereTo-box"> 
-                <input type="text" value=""  name="destination" placeholder="Where to?" style="width: 260px; height: 60px;cursor: pointer; background-color: #F1EAE9; border-style: none; outline: none; position:relative; padding: 10px 15px;"/>
+            <div class="search-white-box">
+              <div class="whereTo-box">
+                <span style="background-color: #F1EAE9; padding: 20px 10px;"><i class="fas fa-map-marker-alt"></i></span>
+                <input type="text" value=""  name="destination" placeholder="Where to?" style="cursor: pointer; width: 100%; background-color: #F1EAE9; border-style: none; outline: none; position:relative; padding: 10px;"/>
               </div>
                   <div class="month-box">
-                    <select class="month" name="month" style="width: 260px; height: 60px; cursor: pointer; background-color: #F1EAE9; border-style: none; outline: none; margin-left: 20px; position:relative; padding:10px 15px; color: gray;">
+                    <span style="background-color: #F1EAE9; padding: 20px 10px;"><i class="fas fa-calendar"></i></span>
+
+                    <select class="month" name="month" style="cursor: pointer; width: 100%; background-color: #F1EAE9; border-style: none; outline: none; position:relative; padding:10px 15px; color: gray;">
                       <option value="">Month</option>
                       <option value="1">January</option>
                       <option value="2">February</option>
@@ -143,7 +147,8 @@
                     </select>
                   </div>
               <div class="travel-type-box">
-                <select class="type" name="type"  style="width: 260px; height: 60px;cursor: pointer; background-color: #F1EAE9; border-style: none; outline: none; margin-left: 20px; position:relative; padding:10px 15px; color: gray;">
+                <span style="background-color: #F1EAE9; padding: 20px 10px;"><i class="fas fa-thumbtack"></i></span>
+                <select class="type" name="type"  style="cursor: pointer; width: 100%; background-color: #F1EAE9; border-style: none; outline: none; position:relative; padding:10px 15px; color: gray;">
                   <option value="">Travel Type</option>
                   <option value="air-rides">Air Rides</option>
                   <option value="beaches">Beaches</option>
@@ -166,72 +171,199 @@
         </div>
   </section>
 
-  <section class="choisse-container">
-    <div class="qode-tour-item" style="display: flex; justify-content: space-between;">
-        <div class="qode-tour-item-inner">
-          <a href="tour.html"><img src="images/travel_tour_img/wedding-img.jpg" style="width: 100%; height: 209px;"/></a>
-            <div class="qode-tour-item-inner-tittle">
-                  <h4><a href="/" style="padding: 15px;">DESTINATION WEDDING</a></h4>
-                  <span class="qode-tours-item-discount-price">$345</span>
+  <section class="choice">
+    <div class="container">
+      <div class="choice-container" style="margin: 90px 0; display: flex; justify-content: space-between;">
+        <div class="choice-tour-item-inner">
+            <a href="tour.html">
+              <div class="choice-tour-item-image">
+                <img src="images/travel_tour_img/wedding-img.jpg" alt=""/>
+              </div>
+            </a>
+
+            <div class="choice-tour-item-inner-tittle">
+              <h4><a href="#">DESTINATION WEDDING</a></h4>
+              <span class="choice-tours-item-discount-price">$345</span>
             </div>
-                  <div class="qode-tour-item-rate">
-                      <p class="qode-tour-item-rate-paragraph">8.0 Superb</p>
-                  </div> 
-                      <div class="qode-tour-item-paragraph">
-                          <p class="qode-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
-                      </div>
-                        <div class="qode-tour-item-inner-block">
-                          <i class="far fa-clock"></i>
-                          <span class="qode-tour-info-label">10 Days</span>
-                          <i class="fas fa-user"></i>
-                          <span class="qode-tour-info-label">12+</span>
-                          <i class="fas fa-map-marker-alt"></i>
-                          <span class="qode-tour-info-label">Cypro</span>
-                        </div>
+            
+            <div class="choice-tour-item-rate">
+              <p class="choice-tour-item-rate-paragraph">8.0 Superb</p>
+            </div> 
+
+            <div class="choice-tour-item-paragraph">
+              <p class="choice-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
+            </div>
+
+            <div class="choice-tour-item-inner-block">
+              <i class="far fa-clock"></i>
+              <span class="choice-tour-info-label">10 Days</span>
+              <i class="fas fa-user"></i>
+              <span class="choice-tour-info-label">12+</span>
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="choice-tour-info-label">Cypro</span>
+            </div>
         </div>
-        <div class="qode-tour-item-inner">
-          <a href="tour.html"><img src="images/travel_tour_img/south-africa.jpg" style="width: 100%; height: 209px;"/></a>
-              <div class="qode-tour-item-inner-tittle">
-                   <h4><a href="/" style="padding: 15px;">SOUTH AMERICA ICONS</a></h4>
-                   <span class="qode-tours-item-discount-price">$675</span>
+
+        <div class="choice-tour-item-inner">
+              <a href="tour.html">
+                <div class="choice-tour-item-image">
+                  <img src="images/travel_tour_img/south-africa.jpg" alt=""/>
+                </div>
+              </a>
+
+              <div class="choice-tour-item-inner-tittle">
+                <h4><a href="/">SOUTH AMERICA ICONS</a></h4>
+                <span class="choice-tours-item-discount-price">$675</span>
               </div> 
-                  <div class="qode-tour-item-rate">
-                      <p class="qode-tour-item-rate-paragraph">7.7 Superb</p>
-                  </div> 
-                      <div class="qode-tour-item-paragraph">
-                          <p class="qode-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
-                      </div>
-                         <div class="qode-tour-item-inner-block">
-                            <i class="far fa-clock"></i>
-                            <span class="qode-tour-info-label">10 Days</span>
-                            <i class="fas fa-user"></i>
-                            <span class="qode-tour-info-label">12+</span>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="qode-tour-info-label">Peru</span>
-                         </div>
-          </div>
-          <div class="qode-tour-item-inner">
-              <a href="tour.html"><img src="images/travel_tour_img/cuban-city.jpg" style="width: 100%; height:209px;"/></a>
-                 <div class="qode-tour-item-inner-tittle">
-                    <h4><a href="/" style="padding: 15px;">CUBA ADVENTURE</a></h4>
-                    <span class="qode-tours-item-discount-price" style="padding-left: 60px;">$630</span>
-                  </div> 
-                      <div class="qode-tour-item-rate">
-                         <p class="qode-tour-item-rate-paragraph">8.0 Superb</p>
-                      </div> 
-                          <div class="qode-tour-item-paragraph">
-                              <p class="qode-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
-                          </div>
-                              <div class="qode-tour-item-inner-block">
-                                <i class="far fa-clock"></i>
-                                <span class="qode-tour-info-label">10 Days</span>
-                                <i class="fas fa-user"></i>
-                                <span class="qode-tour-info-label">12+</span>
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span class="qode-tour-info-label">Cuba</span>
-                              </div>
-           </div>
+                  
+              <div class="choice-tour-item-rate">
+                <p class="choice-tour-item-rate-paragraph">7.7 Superb</p>
+              </div> 
+
+              <div class="choice-tour-item-paragraph">
+                <p class="choice-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
+              </div>
+
+              <div class="choice-tour-item-inner-block">
+                <i class="far fa-clock"></i>
+                <span class="choice-tour-info-label">10 Days</span>
+                <i class="fas fa-user"></i>
+                <span class="choice-tour-info-label">12+</span>
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="choice-tour-info-label">Peru</span>
+              </div>
+        </div>
+
+        <div class="choice-tour-item-inner">
+              <a href="tour.html">
+                <div class="choice-tour-item-image">
+                  <img src="images/travel_tour_img/cuban-city.jpg" alt=""/>
+                </div>
+              </a>
+              
+              <div class="choice-tour-item-inner-tittle">
+                <h4><a href="/">CUBA ADVENTURE</a></h4>
+                <span class="choice-tours-item-discount-price" style="padding-left: 60px;">$630</span>
+              </div> 
+                    
+              <div class="choice-tour-item-rate">
+                <p class="choice-tour-item-rate-paragraph">8.0 Superb</p>
+              </div> 
+                          
+              <div class="choice-tour-item-paragraph">
+                <p class="choice-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
+              </div>
+
+              <div class="choice-tour-item-inner-block">
+                <i class="far fa-clock"></i>
+                <span class="choice-tour-info-label">10 Days</span>
+                <i class="fas fa-user"></i>
+                <span class="choice-tour-info-label">12+</span>
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="choice-tour-info-label">Cuba</span>
+              </div>
+        </div>
+      </div>
      </div>       
+  </section>
+
+  <section class="presentation">
+      <div class="container">
+          <div class="presentation-container" style="margin: 90px 0;">
+              <a href="tour.html">
+                  <div class="presentation-destination-item">
+                      <div class="presentation-image">
+                          <img src="images/travel_tour_img/canada.jpg" alt="photo of canada" width="100%" height="100%">
+                      </div>
+                      <div class="presentation-title">
+                        <h4 class="presentation-container-item-title">Canada</h4>
+                      </div>
+                  </div>   
+              </a>           
+
+              <a href="tour.html">
+                <div class="presentation-destination-item">
+                    <div class="presentation-image">
+                      <img src="images/travel_tour_img/sahara.jpg" alt="photo of canada" width="100%" height="100%">
+                    </div>
+                    <div class="presentation-title">
+                      <h4 class="presentation-container-item-title">Sahara</h4>
+                    </div>
+                </div>
+              </a>
+
+              <a href="tour.html">
+                <div class="presentation-destination-item">
+                    <div class="presentation-image">
+                      <img src="images/travel_tour_img/paris.jpg" alt="photo of canada" width="100%" height="100%">
+                    </div>
+                    <div class="presentation-title">
+                      <h4 class="presentation-container-item-title">Paris</h4>
+                    </div>
+                </div>
+              </a>
+
+              <a href="tour.html">
+                <div class="presentation-destination-item">
+                    <div class="presentation-image">
+                      <img src="images/travel_tour_img/london.jpg" alt="photo of canada" width="100%" height="100%">
+                    </div>
+                    <div class="presentation-title">
+                      <h4 class="presentation-container-item-title">London</h4>
+                    </div>
+                </div>
+              </a>
+        
+              <a href="tour.html">
+                <div class="presentation-destination-item">
+                    <div class="presentation-image">
+                      <img src="images/travel_tour_img/cuba-item.jpg" alt="photo of canada" width="100%" height="100%">
+                    </div>
+                    <div class="presentation-title">
+                      <h4 class="presentation-container-item-title">Cuba</h4>
+                    </div>
+                </div>
+              </a>
+          </div>
+      </div>
+  </section>
+
+  <section class="video">
+    <div class="container">
+      <video poster="images/travel_tour_img/video-travel.jpg" controls style="width: 100%;">
+        <source src="images/video/video.mp4" type="video/mp4">
+        <source src="mov_bbb.ogg" type="video/ogg">
+      </video>
+    </div>
+  </section>
+
+  <section class="popular-tour-types">
+      <div class="container">
+          <div class="container-title" style="margin: 90px 0;">
+              <h2 style=" padding-top: 
+                          100px;font-size: 30px;color:
+                          #313131; font-family: montserrat,sans-serif;font-size:
+                          30px;line-height: 36px;
+                          font-style: normal;
+                          font-weight: 600;
+                          letter-spacing:
+                          1.8px;text-transform: 
+                          uppercase;"
+                          >POPULAR TOUR TYPES
+              </h2>
+              <p style="  color: #949090;
+                          font-family: montserrat,sans-serif;
+                          font-size: 17px;
+                          line-height: 32px;
+                          font-style: normal;
+                          font-weight: 500;
+                          letter-spacing: 0;
+                          text-transform: none;">
+                          Cu vim doctus accumsan. No vis fastidii accumsan, ignota postulant ea mea.</br> 
+                          Vis et prima integre, ei vis ridens.
+                </p>
+           </div> 
+      </div>
   </section>
     </main>
     <footer class="main-footer">
