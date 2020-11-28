@@ -125,7 +125,6 @@ video {
 .header-logo {
     position: relative;
     display: inline-block;
-    float: left;
     top: 50%;
     transform: translateY(-50%);
 }
