@@ -270,8 +270,8 @@
   <section class="presentation">
       <div class="container">
           <div class="presentation-container" > 
-                <button class="prev-button">&#10094;</button>
-                <button class="next-button">&#10095;</button>
+                <button class="prev-button" type="button">&#10094;</button>
+                <button class="next-button" type="button">&#10095;</button>
             <div class="presentation-container-swipe">
               <a href="tour.html" class="link">
                     <div class="presentation-destination-item">
@@ -538,39 +538,39 @@
               
     </script>
    
-   <!---
+   
    <script>
-           const gap = 16;
+                const gap = 8;
+                const carousel = document.getElementsByClassName("presentation-container-swipe"),
+                  content = document.getElementsByClassName("link"),
+                  next = document.getElementsByClassName("next-button"),
+                  prev = document.getElementsByClassName("prev-button");
 
-          const carousel = document.getElementsByClassName("presentation-container-swipe"),
-            content = document.getElementsByClassName("link"),
-            next = document.getElementsByClassName("next-button"),
-            prev = document.getElementsByClassName("prev-button");
+                next.addEventListener("click", e => {
+                  carousel.scrollBy(width + gap, 0);
+                  if (carousel.scrollWidth !== 0) {
+                    prev.style.display = "flex";
+                  }
+                  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+                    next.style.display = "none";
+                  }
+                });
+                prev.addEventListener("click", e => {
+                  carousel.scrollBy(-(width + gap), 0);
+                  if (carousel.scrollLeft - width - gap <= 0) {
+                    prev.style.display = "none";
+                  }
+                  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+                    next.style.display = "flex";
+                  }
+                });
 
-          next.addEventListener("click", e => {
-            carousel.scrollBy(width + gap, 0);
-            if (carousel.scrollWidth !== 0) {
-              prev.style.display = "flex";
-            }
-            if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-              next.style.display = "none";
-            }
-          });
-          prev.addEventListener("click", e => {
-            carousel.scrollBy(-(width + gap), 0);
-            if (carousel.scrollLeft - width - gap <= 0) {
-              prev.style.display = "none";
-            }
-            if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-              next.style.display = "flex";
-            }
-          });
+                let width = carousel.offsetWidth;
+                window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
-          let width = carousel.offsetWidth;
-          window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
 
 
    </script>
--->
   
 </html>

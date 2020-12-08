@@ -510,12 +510,13 @@ video {
 }
 .presentation-container-swipe::-webkit-scrollbar {
     height: 0;
+    scrollbar-width: none;
   }
-  .presentation-container-swipe, a{
-    display: grid;
-    grid-gap: 16px;
-    grid-auto-flow: column;
+  .link{
     margin: auto;
+    display: table-cell;
+    border-spacing: 96px;
+    padding-right: 34px;
 
   }
 .presentation-title{
