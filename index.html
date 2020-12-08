@@ -84,27 +84,48 @@
     </header>
     <main>
       <!-- Slide show  -->
-      <div id="silde-show">
-        <div class="slides">
-          <input type="radio" name="r" id="r1" checked />
-          <input type="radio" name="r" id="r2" />
-          <input type="radio" name="r" id="r3" />
-          <input type="radio" name="r" id="r4" />
-          <input type="radio" name="r" id="r5" />
-          <div class="slide"><img src="" alt="Slide 1" /></div>
-          <div class="slide"><img src="" alt="Slide 2" /></div>
-          <div class="slide"><img src="" alt="Slide 3" /></div>
-          <div class="slide"><img src="" alt="Slide 4" /></div>
-          <div class="slide"><img src="" alt="Slide 5" /></div>
+      <section id="slide-show">
+        <div class="container">
+          <div class="slider">
+            <div class="slides">
+              <input type="radio" name="radio-btn" id="radio1" />
+              <input type="radio" name="radio-btn" id="radio2" />
+              <input type="radio" name="radio-btn" id="radio3" />
+              <input type="radio" name="radio-btn" id="radio4" />
+              <input type="radio" name="radio-btn" id="radio5" />
+              <div class="slide">
+                <img src="./images/home_img/slide1.jpg" alt="Slide 1" />
+              </div>
+              <div class="slide">
+                <img src="./images/home_img/slide2.jpg" alt="Slide 2" />
+              </div>
+              <div class="slide">
+                <img src="./images/home_img/slide3.jpg" alt="Slide 3" />
+              </div>
+              <div class="slide">
+                <img src="./images/home_img/slide4.jpg" alt="Slide 4" />
+              </div>
+              <div class="slide">
+                <img src="./images/home_img/slide5.jpg" alt="Slide 5" />
+              </div>
+            </div>
+            <div class="slide-show-nav-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+              <div class="auto-btn5"></div>
+            </div>
+            <div class="slide-show-nav">
+              <label for="radio1" class="dot"></label>
+              <label for="radio2" class="dot"></label>
+              <label for="radio3" class="dot"></label>
+              <label for="radio4" class="dot"></label>
+              <label for="radio5" class="dot"></label>
+            </div>
+          </div>
         </div>
-        <div class="slide-show-nav">
-          <label for="r1" class="dot"></label>
-          <label for="r2" class="dot"></label>
-          <label for="r3" class="dot"></label>
-          <label for="r4" class="dot"></label>
-          <label for="r5" class="dot"></label>
-        </div>
-      </div>
+      </section>
 
       <table>
         <thead>
