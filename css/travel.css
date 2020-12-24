@@ -55,7 +55,7 @@ video {
     display: flex;
 }
 
-.social-icons a {
+.social-icons-btn {
     background-color: #D2D2D2;
     display: flex;
     align-items: center;
@@ -68,12 +68,12 @@ video {
     border-radius: 50px;
 }
 
-.social-icons a:hover {
-    background-color: #EE802F;
+.social-icons-btn:hover {
+    background-color: #EE802F!important;
     cursor: pointer;
 }
 
-.social-icons a i {
+.social-icons-btn i {
     font-size: 18px;
     color: #FFFFFF;
     text-align: center;
@@ -210,8 +210,9 @@ video {
 
 .main-footer {
     background-color: #EBEBEB;
+    text-align: center;
     padding: 22px 0px;
-    border-top: 1px solid #a5a5a5;
+    border-top: 1px solid rgba(165, 165, 165, .5);
 }
 
 .mySlides {
@@ -348,11 +349,11 @@ video {
 .search-travel-container{
     margin: 0 auto;
     width: 1100px;
-    background-image: url("https://bridge224.qodeinteractive.com/wp-content/uploads/2018/04/home-background-2.png?id=150") !important;
+    /* background-image: url("https://bridge224.qodeinteractive.com/wp-content/uploads/2018/04/home-background-2.png?id=150") !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    padding-top: 144px;
+    padding-top: 144px; */
 }
 
 .search-white-box{
@@ -392,6 +393,7 @@ video {
     background-color:#88394D ;
 }
 .choice-tour-item-inner{
+    background-color: #FFFFFF;
     position: relative;
     overflow: hidden;
     width: 30%;
@@ -580,4 +582,97 @@ video {
 }
 .prev-button:hover, .next-button:hover{
     background-color: rgba(0,0,0,0.35);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.g-scrolling-carousel {
+    position: relative;
+}
+.g-scrolling-carousel .items {
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+.g-scrolling-carousel .items::-webkit-scrollbar { 
+    display: none; 
+}
+.jc-right,
+.jc-left {
+    width: 36px;
+    height: 36px;
+    color:#757575;
+    margin-bottom: auto;
+    margin-top:auto;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index:2;
+    opacity: 0.94;
+
+}
+.jc-right {
+    right:-18px;
+}
+.jc-left {
+    left:-18px;
+}
+
+.jc-right:hover,
+.jc-left:hover{
+    opacity: 0.98;
+}
+.jc-right svg,
+.jc-left svg{
+    position: absolute;
+    left: 0;right: 0;bottom: 0;top: 0;
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    fill: #757575;
+}
+.jc-right:hover svg,
+.jc-left:hover svg{
+   fill: #000;
+}
+@media (pointer: coarse) {
+  .jc-right,
+  .jc-left {
+    display: none !important;
+  }
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
 }
