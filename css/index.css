@@ -236,3 +236,31 @@ body {
 .dot:hover{}
 */
 /* #radio1: checked; */
+/* 
+Review from Clients  -- Start
+
+*/
+.container > .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.review {
+  display: flex;
+  max-width: 310px;
+}
+.user {
+  margin-right: 1rem;
+}
+.review-content > p {
+}
+.review-content > h3 {
+  margin-top: -3px;
+}
+
+/*Review from Clients -- End*/
