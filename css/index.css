@@ -264,3 +264,33 @@ Review from Clients  -- Start
 }
 
 /*Review from Clients -- End*/
+/*Banner --Start */
+#banner {
+  display: flex;
+  background-color: #97455f;
+  color: white;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+#banner-text {
+  flex-grow: 3;
+  margin-left: 5rem;
+}
+#banner-button {
+  margin-right: 5rem;
+}
+#banner-text > h2 {
+  margin-bottom: -0.2rem;
+  font-size: 2rem;
+}
+#banner-button > #contact-button {
+  margin-top: 21.5px;
+  margin-right: 5rem;
+  font-size: 2.5rem;
+
+  color: #97455f;
+  border-radius: 10px;
+  box-shadow: 0;
+}
+
+/*Banner --End*/
