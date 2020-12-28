@@ -294,3 +294,33 @@ Review from Clients  -- Start
 }
 
 /*Banner --End*/
+
+/*----------------------*/
+/*Blog posts, company details,contact form --Start*/
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+#blog-posts {
+  display: flex;
+  flex-direction: column;
+}
+.post-container {
+  display: flex;
+  justify-content: space-around;
+}
+#details {
+  margin-bottom: 35px;
+}
+#address-info,
+#contact-info,
+#working-hours > h4,
+p {
+  margin-top: -15px;
+}
+.post-title {
+  color: #97455f;
+  font-size: 20px;
+}
+
+/*Blog posts, company details,contact form --End*/
