@@ -192,16 +192,28 @@ body {
   border-top: 1px solid #a5a5a5;
 }
 /* Main Contact form -- Start */
+
 #mainForm {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-#mainForm > input,
+.row > label,
+input,
+select,
 textarea {
-  width: 50%;
+  margin-bottom: 15px;
+  padding: 5px;
+  font-size: 1.1rem;
 }
+
+/*Main Contact form -- End*/
+/* Locations section -- Start */
 .locations {
   display: flex;
   flex-direction: column;
@@ -211,4 +223,4 @@ textarea {
   display: flex;
   margin-bottom: 25px;
 }
-/* Main Contact form -- End */
+/* Locations section -- End */
