@@ -285,7 +285,7 @@
 
       <section class="search-travel" >
         <div class="search-travel-container">
-          <form method=" " action=" " autocomplete="off" name="form_search"> 
+          <form method=" " action=" " autocomplete="off" name="form_search"  onsubmit="return validateForm()"> 
             <div class="search-white-box">
               <div class="whereTo-box">
                 <span style="background-color: #F1EAE9; padding: 20px 10px;"><i class="fas fa-map-marker-alt"></i></span>
@@ -1622,5 +1622,16 @@
       }
     );
   </script>
+
+  <!--Validation Form-->
+  <script>
+    function validateForm() {
+      var x = document.forms["form_search"]["destination"].value;
+      if (x == "") {
+        alert("Where to?  must be filled out");
+        return false;
+      }
+    }
+    </script>
   
 </html>
