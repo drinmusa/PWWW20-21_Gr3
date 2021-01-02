@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="demo.appcache">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,12 +8,69 @@
     <link rel="stylesheet" href="css/travel.css"/>
 
     <!-- INTERNAL CSS -->
-    <!-- <style>
-      body {
-          margin: 0;
-          padding: 0;
+    <style>      
+      .modal { 
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background: rgba(0,0,0,0.8);
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.35s ease-in;
       }
-    </style> -->
+      .modal.is-visible {
+        visibility: visible;
+        opacity: 1;
+      }
+      .modal-dialog {
+        position: relative;
+        max-width: 800px;
+        max-height: 80vh;
+        border-radius: 20px;
+        background: white;
+        overflow: auto;
+        cursor: pointer;
+      }
+      
+      .modal-header,
+      .modal-footer {
+        border-bottom: 1px solid rgba(0, 0, 0, .15);
+      }
+      
+      .modal-header {
+        padding: 20px;
+      }
+
+      .modal-header .modal-title {
+        margin: 0;
+        color: #000000;
+      }
+
+      .close-modal {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 7.59px 10px;
+        border-radius: 50px;
+        border: none;
+      }
+      
+      .modal-header .modal-close {
+        font-size: 1.5rem;
+      }
+      
+      .modal p + p {
+        margin-top: 1rem;
+      }
+    </style>
 
   </head>
   <body>
@@ -42,7 +99,7 @@
       <div class="container-fluid">
         <div class="header-top">
           <div class="header-logo">
-            <img src="images/logo.png" alt="Logo" style="height: 157px;" />
+            <img src="images/logo.png" alt="Logo" />
           </div>
           <div class="header-search">
             <input type="text" class="search-input" name="" id="searchBox" placeholder="Search Our Website..."/>
@@ -66,10 +123,6 @@
               <a href="travel.html" class="nav-link"> TRAVEL </a>
             </li>
             <li class="nav-item">
-              <a href="tour.html" class="nav-link">TOUR</a>
-            </li>
-
-            <li class="nav-item">
               <a href="contact.html" class="nav-link">CONTACT</a>
             </li>
           </ul>
@@ -86,24 +139,24 @@
             <div class="slider-display-container mySlides">
               <img src="images/travel_tour_img/travel-img-01.jpg" class="" alt="">
               <div class="slider-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-                <h1 class="slider-title">Lorem ipsum generator</h1>
-                <p class="slider-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                <h1 class="slider-title">POPULAR TOUR TYPES</h1>
+                <p class="slider-desc">Enjoy all kind of travel with us.</p>
               </div>
             </div>
 
             <div class="slider-display-container mySlides">
               <img src="images/travel_tour_img/travel-img-02.jpg" class="" alt="">
               <div class="slider-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-                <h1 class="slider-title">Lorem ipsum generator</h1>
-                <p class="slider-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                <h1 class="slider-title">POPULAR TOUR TYPES</h1>
+                <p class="slider-desc">Enjoy all kind of travel with us.</p>
               </div>
             </div>
 
             <div class="slider-display-container mySlides">
               <img src="images/travel_tour_img/travel-img-03.jpg" class="" alt="">
               <div class="slider-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-                <h1 class="slider-title">Lorem ipsum generator</h1>
-                <p class="slider-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                <h1 class="slider-title">POPULAR TOUR TYPES</h1>
+                <p class="slider-desc">Enjoy all kind of travel with us.</p>
               </div>
             </div>
 
@@ -286,14 +339,13 @@
     <div class="container">
       <div class="choice-container" style="margin: 90px 0; display: flex; justify-content: space-between;">
         <div class="choice-tour-item-inner">
-            <a href="tour.html">
               <div class="choice-tour-item-image">
                 <img src="images/travel_tour_img/wedding-img.jpg" alt=""/>
               </div>
-            </a>
+            
 
             <div class="choice-tour-item-inner-tittle">
-              <h4><a href="#">DESTINATION WEDDING</a></h4>
+              <h4>DESTINATION WEDDING</h4>
               <span class="choice-tours-item-discount-price">$345</span>
             </div>
             
@@ -302,7 +354,7 @@
             </div> 
 
             <div class="choice-tour-item-paragraph">
-              <p class="choice-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
+              <p class="choice-tour-item-paragraph-p">Every romantic event and getaway we help plan is tailored to each of our couples' visions.</p>
             </div>
 
             <div class="choice-tour-item-inner-block">
@@ -316,14 +368,12 @@
         </div>
 
         <div class="choice-tour-item-inner">
-              <a href="tour.html">
                 <div class="choice-tour-item-image">
                   <img src="images/travel_tour_img/south-africa.jpg" alt=""/>
                 </div>
-              </a>
 
               <div class="choice-tour-item-inner-tittle">
-                <h4><a href="/">SOUTH AMERICA ICONS</a></h4>
+                <h4>SOUTH AMERICA ICONS</h4>
                 <span class="choice-tours-item-discount-price">$675</span>
               </div> 
                   
@@ -332,7 +382,7 @@
               </div> 
 
               <div class="choice-tour-item-paragraph">
-                <p class="choice-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
+                <p class="choice-tour-item-paragraph-p">Bear witness to South America's iconic cities and unlock a diverse continent steeped</p>
               </div>
 
               <div class="choice-tour-item-inner-block">
@@ -346,14 +396,12 @@
         </div>
 
         <div class="choice-tour-item-inner">
-              <a href="tour.html">
                 <div class="choice-tour-item-image">
                   <img src="images/travel_tour_img/cuban-city.jpg" alt=""/>
                 </div>
-              </a>
               
               <div class="choice-tour-item-inner-tittle">
-                <h4><a href="/">CUBA ADVENTURE</a></h4>
+                <h4>CUBA ADVENTURE</h4>
                 <span class="choice-tours-item-discount-price" style="padding-left: 60px;">$630</span>
               </div> 
                     
@@ -362,7 +410,7 @@
               </div> 
                           
               <div class="choice-tour-item-paragraph">
-                <p class="choice-tour-item-paragraph-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus…</p>
+                <p class="choice-tour-item-paragraph-p">Join a small group tour of Cuba, arrange a private tour, or take a short break in Havana.</p>
               </div>
 
               <div class="choice-tour-item-inner-block">
@@ -377,13 +425,13 @@
       </div>
      </div>       
   </section>
-
+  
   <section class="presentation">
       <div class="container">
-        <h1 class="presentation-category">Beaches</h1>
+        <h1 class="presentation-category">Beaches <a class="link" data-open="modal-results"><i class="fas fa-info-circle"></i></a></h1>
             <div class="presentation-container g-scrolling-carousel"> 
               <div class="presentation-container-swipe items items-1">
-                <a href="tour.html" class="link">
+                <a class="link" data-open="modal-maldives" onclick="clickCounter()">
                       <div class="presentation-destination-item">
                           <div class="presentation-image">
                               <img src="images/travel_tour_img/maldives.jpg" alt="photo of canada" width="100%" height="100%">
@@ -392,9 +440,9 @@
                             <h4 class="presentation-container-item-title">Maldives</h4>
                           </div>
                       </div>   
-                  </a>           
-              
-                  <a href="tour.html" class="link">
+                  </a> 
+
+                  <a class="link" data-open="modal-newzeland" onclick="clickCounter()">
                     <div class="presentation-destination-item">
                         <div class="presentation-image">
                           <img src="images/travel_tour_img/new-zeland.jpg" alt="photo of canada" width="100%" height="100%">
@@ -405,7 +453,7 @@
                     </div>
                   </a>
                 
-                  <a href="tour.html" class="link">
+                  <a class="link" data-open="modal-positano" onclick="clickCounter()">
                     <div class="presentation-destination-item">
                         <div class="presentation-image">
                           <img src="images/travel_tour_img/positano.jpg" alt="photo of canada" width="100%" height="100%">
@@ -416,7 +464,7 @@
                     </div>
                   </a>
             
-                  <a href="tour.html" class="link">
+                  <a class="link" data-open="modal-arecaceae" onclick="clickCounter()">
                     <div class="presentation-destination-item">
                         <div class="presentation-image">
                           <img src="images/travel_tour_img/Arecaceae.jpg" alt="photo of canada" width="100%" height="100%">
@@ -427,7 +475,7 @@
                     </div>
                   </a>
                 
-                  <a href="tour.html" class="link">
+                  <a class="link" data-open="modal-island" onclick="clickCounter()">
                     <div class="presentation-destination-item">
                         <div class="presentation-image">
                           <img src="images/travel_tour_img/island.jpg" alt="photo of canada" width="100%" height="100%">
@@ -438,7 +486,7 @@
                     </div>
                   </a>
       
-                  <a href="tour.html" class="link">
+                  <a class="link" data-open="modal-cuba" onclick="clickCounter()">
                     <div class="presentation-destination-item">
                         <div class="presentation-image">
                           <img src="images/travel_tour_img/cuba-item.jpg" alt="photo of canada" width="100%" height="100%">
@@ -449,7 +497,7 @@
                     </div>
                   </a>
 
-                  <a href="tour.html" class="link">
+                  <a class="link" data-open="modal-mexiko" onclick="clickCounter()">
                     <div class="presentation-destination-item">
                         <div class="presentation-image">
                           <img src="images/travel_tour_img/mexiko.jpg" alt="photo of canada" width="100%" height="100%">
@@ -460,7 +508,7 @@
                     </div>
                   </a>
 
-                  <a href="tour.html" class="link">
+                  <a class="link" data-open="modal-shoreline" onclick="clickCounter()">
                     <div class="presentation-destination-item">
                         <div class="presentation-image">
                           <img src="images/travel_tour_img/shoreline.jpg" alt="photo of canada" width="100%" height="100%">
@@ -471,7 +519,7 @@
                     </div>
                   </a>
 
-                  <a href="tour.html" class="link">
+                  <a class="link" data-open="modal-malaysia" onclick="clickCounter()">
                     <div class="presentation-destination-item">
                         <div class="presentation-image">
                           <img src="images/travel_tour_img/malaysia.jpg" alt="photo of canada" width="100%" height="100%">
@@ -482,7 +530,7 @@
                     </div>
                   </a>
 
-                  <a href="tour.html" class="link">
+                  <a class="link" data-open="modal-kouroutas" onclick="clickCounter()">
                     <div class="presentation-destination-item">
                         <div class="presentation-image">
                           <img src="images/travel_tour_img/kouroutas.jpg" alt="photo of canada" width="100%" height="100%">
@@ -501,7 +549,8 @@
         <h1 class="presentation-category">Adventure World</h1>
           <div class="presentation-container g-scrolling-carousel"> 
             <div class="presentation-container-swipe items items-2">
-              <a href="tour.html" class="link">
+              
+              <a class="link" data-open="modal-gudvangen" onclick="clickCounter()">
                     <div class="presentation-destination-item">
                         <div class="presentation-image">
                             <img src="images/travel_tour_img/gudvangen.jpg" alt="photo of canada" width="100%" height="100%">
@@ -512,7 +561,7 @@
                     </div>   
                 </a>           
             
-                <a href="tour.html" class="link">
+                <a class="link" data-open="modal-lumajang" onclick="clickCounter()">
                   <div class="presentation-destination-item">
                       <div class="presentation-image">
                         <img src="images/travel_tour_img/lumajang-regency.jpg" alt="photo of canada" width="100%" height="100%">
@@ -523,7 +572,7 @@
                   </div>
                 </a>
               
-                <a href="tour.html" class="link">
+                <a class="link" data-open="modal-zirkel" onclick="clickCounter()">
                   <div class="presentation-destination-item">
                       <div class="presentation-image">
                         <img src="images/travel_tour_img/mount-zirkel.jpg" alt="photo of canada" width="100%" height="100%">
@@ -534,7 +583,7 @@
                   </div>
                 </a>
           
-                <a href="tour.html" class="link">
+                <a class="link" data-open="modal-oljatovalley" onclick="clickCounter()">
                   <div class="presentation-destination-item">
                       <div class="presentation-image">
                         <img src="images/travel_tour_img/oljato-monument Valley.jpg" alt="photo of canada" width="100%" height="100%">
@@ -545,7 +594,7 @@
                   </div>
                 </a>
               
-                <a href="tour.html" class="link">
+                <a class="link" data-open="modal-annecy" onclick="clickCounter()">
                   <div class="presentation-destination-item">
                       <div class="presentation-image">
                         <img src="images/travel_tour_img/annecy.jpg" alt="photo of canada" width="100%" height="100%">
@@ -556,7 +605,7 @@
                   </div>
                 </a>
     
-                <a href="tour.html" class="link">
+                <a class="link" data-open="modal-sahara" onclick="clickCounter()">
                   <div class="presentation-destination-item">
                       <div class="presentation-image">
                         <img src="images/travel_tour_img/sahara.jpg" alt="photo of canada" width="100%" height="100%">
@@ -567,7 +616,7 @@
                   </div>
                 </a>
 
-                <a href="tour.html" class="link">
+                <a class="link" data-open="modal-brasov" onclick="clickCounter()">
                   <div class="presentation-destination-item">
                       <div class="presentation-image">
                         <img src="images/travel_tour_img/brasov.jpg" alt="photo of canada" width="100%" height="100%">
@@ -578,7 +627,7 @@
                   </div>
                 </a>
 
-                <a href="tour.html" class="link">
+                <a class="link" data-open="modal-grindewald" onclick="clickCounter()">
                   <div class="presentation-destination-item">
                       <div class="presentation-image">
                         <img src="images/travel_tour_img/grindewald.jpg" alt="photo of canada" width="100%" height="100%">
@@ -589,7 +638,7 @@
                   </div>
                 </a>
 
-                <a href="tour.html" class="link">
+                <a class="link" data-open="modal-lofoten" onclick="clickCounter()">
                   <div class="presentation-destination-item">
                       <div class="presentation-image">
                         <img src="images/travel_tour_img/lofoten.jpg" alt="photo of canada" width="100%" height="100%">
@@ -600,7 +649,7 @@
                   </div>
                 </a>
 
-                <a href="tour.html" class="link">
+                <a class="link" data-open="modal-crestedbutte" onclick="clickCounter()">
                   <div class="presentation-destination-item">
                       <div class="presentation-image">
                         <img src="images/travel_tour_img/crested-butte.jpg" alt="photo of canada" width="100%" height="100%">
@@ -620,7 +669,8 @@
       <h1 class="presentation-category">City Sightseeing</h1>
         <div class="presentation-container g-scrolling-carousel"> 
           <div class="presentation-container-swipe items items-3">
-            <a href="tour.html" class="link">
+           
+            <a class="link" data-open="modal-terrasa" onclick="clickCounter()">
                   <div class="presentation-destination-item">
                       <div class="presentation-image">
                           <img src="images/travel_tour_img/terrazza.jpg" alt="photo of canada" width="100%" height="100%">
@@ -631,7 +681,7 @@
                   </div>   
               </a>           
           
-              <a href="tour.html" class="link">
+              <a class="link" data-open="modal-melboune" onclick="clickCounter()">
                 <div class="presentation-destination-item">
                     <div class="presentation-image">
                       <img src="images/travel_tour_img/melbourne.jpg" alt="photo of canada" width="100%" height="100%">
@@ -642,7 +692,7 @@
                 </div>
               </a>
             
-              <a href="tour.html" class="link">
+              <a class="link" data-open="modal-paris" onclick="clickCounter()">
                 <div class="presentation-destination-item">
                     <div class="presentation-image">
                       <img src="images/travel_tour_img/paris.jpg" alt="photo of canada" width="100%" height="100%">
@@ -653,7 +703,7 @@
                 </div>
               </a>
         
-              <a href="tour.html" class="link">
+              <a class="link" data-open="modal-london" onclick="clickCounter()">
                 <div class="presentation-destination-item">
                     <div class="presentation-image">
                       <img src="images/travel_tour_img/london.jpg" alt="photo of canada" width="100%" height="100%">
@@ -664,7 +714,7 @@
                 </div>
               </a>
             
-              <a href="tour.html" class="link">
+              <a class="link" data-open="modal-sanfrancisko" onclick="clickCounter()">
                 <div class="presentation-destination-item">
                     <div class="presentation-image">
                       <img src="images/travel_tour_img/san-francisko.jpg" alt="photo of canada" width="100%" height="100%">
@@ -675,7 +725,7 @@
                 </div>
               </a>
 
-              <a href="tour.html" class="link">
+              <a class="link" data-open="modal-stockholm" onclick="clickCounter()">
                 <div class="presentation-destination-item">
                     <div class="presentation-image">
                       <img src="images/travel_tour_img/stockholm.jpg" alt="photo of canada" width="100%" height="100%">
@@ -686,7 +736,7 @@
                 </div>
               </a>
 
-              <a href="tour.html" class="link">
+              <a class="link" data-open="modal-venecie" onclick="clickCounter()">
                 <div class="presentation-destination-item">
                     <div class="presentation-image">
                       <img src="images/travel_tour_img/venecie.jpg" alt="photo of canada" width="100%" height="100%">
@@ -697,7 +747,7 @@
                 </div>
               </a>
 
-              <a href="tour.html" class="link">
+              <a class="link" data-open="modal-fukuoka" onclick="clickCounter()">
                 <div class="presentation-destination-item">
                     <div class="presentation-image">
                       <img src="images/travel_tour_img/fukuoka.jpg" alt="photo of canada" width="100%" height="100%">
@@ -708,7 +758,7 @@
                 </div>
               </a>
 
-              <a href="tour.html" class="link">
+              <a class="link" data-open="modal-rome" onclick="clickCounter()">
                 <div class="presentation-destination-item">
                     <div class="presentation-image">
                       <img src="images/travel_tour_img/rome.jpg" alt="photo of canada" width="100%" height="100%">
@@ -719,7 +769,7 @@
                 </div>
               </a>
 
-              <a href="tour.html" class="link">
+              <a class="link" data-open="modal-prague" onclick="clickCounter()">
                 <div class="presentation-destination-item">
                     <div class="presentation-image">
                       <img src="images/travel_tour_img/prague.jpg" alt="photo of canada" width="100%" height="100%">
@@ -732,9 +782,560 @@
             </div>
           </div>
         </div>
-      </div>  
-      
+      </div> 
   </section>
+
+
+
+  <!-- Modal Results -->
+  <div class="modal" id="modal-results">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Info</h4>
+          <button class="close-modal" aria-label="close modal" data-close>
+            ✕  
+          </button>
+        </div>
+        <p class="modal-presentation-description">
+          <span id="result"></span></p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function clickCounter() {
+      if (typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+          sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+          sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have opened the modal " + sessionStorage.clickcount + " time(s) in this session.";
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+      }
+    }
+  </script>
+
+
+
+
+  <!-- Modal Maldives -->
+  <div class="modal" id="modal-maldives">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/maldives.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal New Zeland -->
+  <div class="modal" id="modal-newzeland">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/new-zeland.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal Positano -->
+  <div class="modal" id="modal-positano">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/positano.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+   <!-- Modal Arecaceae -->
+   <div class="modal" id="modal-arecaceae">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/Arecaceae.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+   <!-- Modal Island -->
+   <div class="modal" id="modal-island">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/island.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+     <!-- Modal Cuba -->
+     <div class="modal" id="modal-cuba">
+      <div class="modal-dialog">
+        <section class="modal-content">
+          <button class="close-modal" aria-label="close modal" data-close>
+            ✕  
+          </button>
+  
+          <div class="modal-presentation-image">
+            <img src="images/travel_tour_img/cuba-item.jpg" alt="photo of canada" width="100%" height="100%">
+          </div>
+  
+          <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+        </section>
+      </div>
+    </div>
+
+       <!-- Modal Mexiko -->
+   <div class="modal" id="modal-mexiko">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/mexiko.jpg" alt="photo of mexiko" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+     <!-- Modal Shoreline -->
+     <div class="modal" id="modal-shoreline">
+      <div class="modal-dialog">
+        <section class="modal-content">
+          <button class="close-modal" aria-label="close modal" data-close>
+            ✕  
+          </button>
+  
+          <div class="modal-presentation-image">
+            <img src="images/travel_tour_img/shoreline.jpg" alt="photo of canada" width="100%" height="100%">
+          </div>
+  
+          <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+        </section>
+      </div>
+    </div>
+
+       <!-- Modal Malaysia -->
+   <div class="modal" id="modal-malaysia">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/malaysia.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+     <!-- Modal Kouroutas -->
+     <div class="modal" id="modal-kouroutas">
+      <div class="modal-dialog">
+        <section class="modal-content">
+          <button class="close-modal" aria-label="close modal" data-close>
+            ✕  
+          </button>
+  
+          <div class="modal-presentation-image">
+            <img src="images/travel_tour_img/kouroutas.jpg" alt="photo of canada" width="100%" height="100%">
+          </div>
+  
+          <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Second Corusel-->
+
+    <!-- Modal Gudvangen -->
+  <div class="modal" id="modal-gudvangen">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/gudvangen.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal Lumajang -->
+  <div class="modal" id="modal-lumajang">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/lumajang-regency.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal Zirkel -->
+  <div class="modal" id="modal-zirkel">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/mount-zirkel.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal Oljato Valley -->
+  <div class="modal" id="modal-oljatovalley">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/oljato-monument Valley.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal Annecy -->
+  <div class="modal" id="modal-annecy">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/annecy.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal Sahara -->
+  <div class="modal" id="modal-sahara">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/sahara.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal Brasov -->
+  <div class="modal" id="modal-brasov">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/brasov.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal Grindewald -->
+  <div class="modal" id="modal-grindewald">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/grindewald.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal Lofoten -->
+  <div class="modal" id="modal-lofoten">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/lofoten.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal Crested-Butte -->
+  <div class="modal" id="modal-crestedbutte">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/crested-butte.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  <!--Third Corosuel-->
+
+   <!-- Modal Terrasa -->
+   <div class="modal" id="modal-terrasa">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/terrazza.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+   <!-- Modal Melboune -->
+   <div class="modal" id="modal-melboune">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/melbourne.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+   <!-- Modal Paris -->
+   <div class="modal" id="modal-paris">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/paris.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+   <!-- Modal London -->
+   <div class="modal" id="modal-london">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/london.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+   <!-- Modal San Francisko -->
+   <div class="modal" id="modal-sanfrancisko">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/san-francisko.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+   <!-- Modal Stockholm -->
+   <div class="modal" id="modal-stockholm">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/stockholm.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+   <!-- Modal Venecie -->
+   <div class="modal" id="modal-venecie">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/venecie.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+  
+
+   <!-- Modal Fukuoka -->
+   <div class="modal" id="modal-fukuoka">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/fukuoka.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+   <!-- Modal Rome -->
+   <div class="modal" id="modal-rome">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/rome.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
+
+   <!-- Modal Prague -->
+   <div class="modal" id="modal-prague">
+    <div class="modal-dialog">
+      <section class="modal-content">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕  
+        </button>
+
+        <div class="modal-presentation-image">
+          <img src="images/travel_tour_img/prague.jpg" alt="photo of canada" width="100%" height="100%">
+        </div>
+
+        <p class="modal-presentation-description">Maldives, officially the Republic of Maldives, is a small archipelagic state in South Asia, situated in the Arabian Sea of the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres from the Asian continent's mainland.</p>
+      </section>
+    </div>
+  </div>
 
   <section class="video">
     <div class="container">
@@ -767,19 +1368,19 @@
                           font-weight: 500;
                           letter-spacing: 0;
                           text-transform: none;">
-                          Cu vim doctus accumsan. No vis fastidii accumsan, ignota postulant ea mea.</br> 
-                          Vis et prima integre, ei vis ridens.
+                          Enjoy all kind of travel with us.
                 </p>
            </div> 
       </div>
   </section>
-    </main>
+</main>
+
     <footer class="main-footer">
       <div class="container">
         Copyright &copy; 2020 - All rights reserved - Imaginative
       </div>
     </footer>
-  </body>
+</body>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <!-- SOCIAL TOP BUTTON HIDE/SHOW -->
@@ -801,7 +1402,7 @@
   </script>
 
 
-   <!-- SLIDER -->
+  <!-- SLIDER -->
   <script>
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -829,253 +1430,183 @@
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " w3-white";
     }
-    </script>
+  </script>
     
-    <!-- SLIDER AUTO-CHANGE -->
-    <script>
-      var slideIndexe = 0;
-      showDives();
-      
-      function showDives() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        var y = document.getElementsByClassName("demo");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";  
-        }
-        slideIndexe++;
-        if (slideIndexe > x.length) {slideIndexe = 1}    
-        for (i = 0; i < y.length; i++) {
-          y[i].className = y[i].className.replace(" w3-white", "");
-        }
-        x[slideIndexe-1].style.display = "block";  
-        y[slideIndexe-1].className += "  w3-white";
-        setTimeout(showDives, 4000); // Change image every 4 seconds
+  <!-- SLIDER AUTO-CHANGE -->
+  <script>
+    var slideIndexe = 0;
+    showDives();
+    
+    function showDives() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var y = document.getElementsByClassName("demo");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
       }
-      </script>
-
-
-   <!--PRESENTATION CHANGER 
-   <script>
-          var slideIndex = 1;
-          showBox(slideIndex);
-          
-          function nextBox(n) {
-            showBox(slideIndex += n);
-          }
-      
-          
-          function showBox(n) {
-            var i;
-            var k=0;
-            var slides = document.getElementsByClassName("presentation-destination-item");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-               for(i=0; i<slides.length; i++){
-                   if(n > i){
-
-                      sildes[0] = slides[n];
-                      
-                   }
-                   slides[i].style.display = "block";
-                   
-               }
-               slides[slideIndex-1].style.display = "none";
-               
-          }
-              
-    </script>
-   -->
+      slideIndexe++;
+      if (slideIndexe > x.length) {slideIndexe = 1}    
+      for (i = 0; i < y.length; i++) {
+        y[i].className = y[i].className.replace(" w3-white", "");
+      }
+      x[slideIndexe-1].style.display = "block";  
+      y[slideIndexe-1].className += "  w3-white";
+      setTimeout(showDives, 4000); // Change image every 4 seconds
+    }
+  </script>
    
-   <script>
-          jQuery(function ($) {
-            $.fn.gScrollingCarousel = function (amount) {
-                var supportsTouch = false;
-
-                // if ('ontouchstart' in window){
-                //     supportsTouch = true;
-                //     } else if(window.navigator.msPointerEnabled) {
-                //     supportsTouch = true;
-                //     } else if ('ontouchstart' in document.documentElement) {
-                //     supportsTouch = true;
-                // }
-
-                if (!supportsTouch){
-                    element = $(this);
-                    amount = amount || element.children(":first").outerWidth(true);
-                    var x,left,down,newX,oldX,maxScrollLeft,am,amX,amL,leftElem,rightElem,currx,items,element,elements;
-                    leftElem = $('<span />').addClass('jc-left').html('<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>');
-                    rightElem = $('<span />').addClass('jc-right').html('<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>');
-                    element.parent().append(leftElem).append(rightElem);
-
-                    // maxScrollLeft = element.get(0).scrollWidth - element.get(0).clientWidth;
-                    // left = element.scrollLeft();
-                    // if(maxScrollLeft == left) {
-                    //     rightElem.hide();
-                    // } else {
-                    //     rightElem.show();
-                    // }
-                    // if(left == 0) {
-                    //     leftElem.hide();
-                    // } else {
-                    //     leftElem.show();
-                    // }
-                    
-                    // element.bind("DOMMouseScroll mousewheel", function (event) {    
-                    //         var oEvent = event.originalEvent, 
-                    //         direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta, 
-                    //         position = element.scrollLeft();
-                    //     position += direction > 0 ? -amount : amount;
-
-                    //     $(this).scrollLeft(position);
-                    //     event.preventDefault();
-                    //     maxScrollLeft = element.get(0).scrollWidth - element.get(0).clientWidth;
-                    //     left = element.scrollLeft();
-                    //     if(maxScrollLeft == left) {
-                    //         rightElem.fadeOut(200);
-                    //     } else {
-                    //         rightElem.fadeIn(200);
-                    //     }
-                    //     if(left == 0) {
-                    //         leftElem.fadeOut(200);
-                    //     } else {
-                    //         leftElem.fadeIn(200);
-                    //     }
-
-                    // }).bind("mousedown", function(e){
-                    //     e.preventDefault();
-                    //     down = true;
-                    //     x = e.pageX;
-                    //     left = $(this).scrollLeft();
-                    // }).bind("mousemove", function(e){
-                    //     if(down){
-                    //         if(e.pageX != x){
-                    //             element.addClass("nonclick");
-                    //             newX = e.pageX;
-                    //             oldX = element.scrollLeft();
-                    //             element.scrollLeft(left-newX+x);  
-                    //             maxScrollLeft = element.get(0).scrollWidth - element.get(0).clientWidth;
-                    //             if(maxScrollLeft == oldX) {
-                    //                 rightElem.fadeOut(200);
-                    //             } else {
-                    //                 rightElem.fadeIn(200);
-                    //             }
-                    //             if(oldX == 0) {
-                    //                 leftElem.fadeOut(200);
-                    //             } else {
-                    //                 leftElem.fadeIn(200);
-                    //             }
-                    //         }
-                    //     } else {
-                    //         element.removeClass("nonclick");
-                    //     }
-                    // });
-                    rightElem.bind("click", function(e){
-                      leftElem.fadeIn(200);
-                      items = $(this).siblings(".items");
-                      currx = items.scrollLeft();
-                      amX = parseInt($(this).parent().width() / amount); // cantidad de elementos x viewport
-                      am = (amX * amount) - amount;
-                      maxScrollLeft = items.get(0).scrollWidth - items.get(0).clientWidth;
-                      //if(currx+am >= maxScrollLeft) $(this).fadeOut(200);
-                      items.animate( { scrollLeft: '+='+am }, 200);
+  <!-- CAROUSEL --> 
+  <script>
+      jQuery(function ($) {
+        $.fn.gScrollingCarousel = function (amount) {
+            var supportsTouch = false;
+            if (!supportsTouch){
+                element = $(this);
+                amount = amount || element.children(":first").outerWidth(true);
+                var x,left,down,newX,oldX,maxScrollLeft,am,amX,amL,leftElem,rightElem,currx,items,element,elements;
+                leftElem = $('<span />').addClass('jc-left').html('<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>');
+                rightElem = $('<span />').addClass('jc-right').html('<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>');
+                element.parent().append(leftElem).append(rightElem);
+                rightElem.bind("click", function(e){
+                  leftElem.fadeIn(200);
+                  items = $(this).siblings(".items");
+                  currx = items.scrollLeft();
+                  amX = parseInt($(this).parent().width() / amount); // cantidad de elementos x viewport
+                  am = (amX * amount) - amount;
+                  maxScrollLeft = items.get(0).scrollWidth - items.get(0).clientWidth;
+                  //if(currx+am >= maxScrollLeft) $(this).fadeOut(200);
+                  items.animate( { scrollLeft: '+='+am }, 200);
+                });
+                leftElem.bind("click", function(e){
+                  rightElem.fadeIn(200);
+                  items = $(this).siblings(".items");
+                  currx = items.scrollLeft();
+                  amX = parseInt($(this).parent().width() / amount); // cantidad de elementos x viewport
+                  am = (amX * amount) - amount;
+                  //if(currx-am <= 0) $(this).fadeOut(200);
+                  items.animate( { scrollLeft: '-='+am }, 200);
+                });
+                $(window).on('resize', function(){
+                    element.each( function(){
+                        elements = $(this);
+                        maxScrollLeft = elements.get(0).scrollWidth - elements.get(0).clientWidth;
+                        left = elements.scrollLeft();
+                        if(maxScrollLeft == left) {
+                            rightElem.fadeOut(200);
+                        } else {
+                            rightElem.fadeIn(200);
+                        }
+                        if(left == 0) {
+                            leftElem.fadeOut(200);
+                        } else {
+                            leftElem.fadeIn(200);
+                        }
                     });
-                    leftElem.bind("click", function(e){
-                      rightElem.fadeIn(200);
-                      items = $(this).siblings(".items");
-                      currx = items.scrollLeft();
-                      amX = parseInt($(this).parent().width() / amount); // cantidad de elementos x viewport
-                      am = (amX * amount) - amount;
-                      //if(currx-am <= 0) $(this).fadeOut(200);
-                      items.animate( { scrollLeft: '-='+am }, 200);
-                    });
-                    $(window).on('resize', function(){
-                        element.each( function(){
-                            elements = $(this);
-                            maxScrollLeft = elements.get(0).scrollWidth - elements.get(0).clientWidth;
-                            left = elements.scrollLeft();
-                            if(maxScrollLeft == left) {
-                                rightElem.fadeOut(200);
-                            } else {
-                                rightElem.fadeIn(200);
-                            }
-                            if(left == 0) {
-                                leftElem.fadeOut(200);
-                            } else {
-                                leftElem.fadeIn(200);
-                            }
-                        });
-                    });
-                    $(document).on("mouseup mousedown click", ".nonclick a", function(e){  //prevent clicking while moving
-                      e.preventDefault();
-                    });
-                    $(document).on("mouseup", function(e){ //globally remove nonclicks onmouseup
-                        setTimeout(function(){
-                            element.removeClass("nonclick");
-                            down=false;
-                        },1);
-                    });
-                }
+                });
+                $(document).on("mouseup mousedown click", ".nonclick a", function(e){  //prevent clicking while moving
+                  e.preventDefault();
+                });
+                $(document).on("mouseup", function(e){ //globally remove nonclicks onmouseup
+                    setTimeout(function(){
+                        element.removeClass("nonclick");
+                        down=false;
+                    },1);
+                });
             }
-        });
+        }
+    });
    </script>
 
-<script>
-  $(document).ready(function(){
-    $(".g-scrolling-carousel .items-1").gScrollingCarousel();
-    $(".g-scrolling-carousel .items-2").gScrollingCarousel();
-    $(".g-scrolling-carousel .items-3").gScrollingCarousel();
-  });
-</script>
+  <script>
+    $(document).ready(function(){
+      $(".g-scrolling-carousel .items-1").gScrollingCarousel();
+      $(".g-scrolling-carousel .items-2").gScrollingCarousel();
+      $(".g-scrolling-carousel .items-3").gScrollingCarousel();
+    });
+  </script>
 
-<script>
-  function updateBackground() {
-  var 
-    hr = (new Date()).getHours(),
-    body = document.body,
-    bstyle = body.style,
-    headertopstyle = document.querySelector('.social-top'),
-    headerstyle = document.querySelector('.main-header'),
-    headerspacestyle = document.querySelector('.header-space'),
-    footer = document.querySelector('.main-footer');
-    
-  if (hr < 10) {
-    bstyle.backgroundColor = '#FFFFFF';
-    headertopstyle.style.backgroundColor = '#FFFFFF';
-    headerstyle.style.backgroundColor = '#EBEBEB';
-    headerspacestyle.style.backgroundColor = '#FFFFFF';
-    bstyle.color = '#000000';
-    document.querySelectorAll("presentation-category").forEach(function(element) { element.style.color = '#313131'; });
-    document.querySelectorAll('.social-icons-btn').forEach(function(element) { element.style.backgroundColor = '#D2D2D2'; });
-    document.getElementById("st0").style.stroke = '#000000';
-    document.getElementById("st1").style.stroke = '#000000';
-  } else if (hr > 10 && hr < 19) {
-    bstyle.backgroundColor = '#FFFFFF';
-    headertopstyle.style.backgroundColor = '#FFFFFF';
-    headerstyle.style.backgroundColor = '#EBEBEB';
-    headerspacestyle.style.backgroundColor = '#FFFFFF';
-    bstyle.color = '#000000';
-    document.querySelectorAll("presentation-category").forEach(function(element) { element.style.color = '#313131'; });
-    document.querySelectorAll('.social-icons-btn').forEach(function(element) { element.style.backgroundColor = '#D2D2D2'; });
-    document.getElementById("st0").style.stroke = '#000000';
-    document.getElementById("st1").style.stroke = '#000000';
+  <!-- Change Color Based on Time --> 
+  <script>
+    function updateBackground() {
+    var 
+      hr = (new Date()).getHours(),
+      body = document.body,
+      bstyle = body.style,
+      headertopstyle = document.querySelector('.social-top'),
+      headerstyle = document.querySelector('.main-header'),
+      headerspacestyle = document.querySelector('.header-space'),
+      footer = document.querySelector('.main-footer');
+      
+    if (hr < 10) {
+      bstyle.backgroundColor = '#FFFFFF';
+      headertopstyle.style.backgroundColor = '#FFFFFF';
+      headerstyle.style.backgroundColor = '#EBEBEB';
+      headerspacestyle.style.backgroundColor = '#FFFFFF';
+      bstyle.color = '#000000';
+      document.querySelectorAll("presentation-category").forEach(function(element) { element.style.color = '#313131'; });
+      document.querySelectorAll('.social-icons-btn').forEach(function(element) { element.style.backgroundColor = '#D2D2D2'; });
+      document.getElementById("st0").style.stroke = '#000000';
+      document.getElementById("st1").style.stroke = '#000000';
+    } else if (hr > 10 && hr < 19) {
+      bstyle.backgroundColor = '#FFFFFF';
+      headertopstyle.style.backgroundColor = '#FFFFFF';
+      headerstyle.style.backgroundColor = '#EBEBEB';
+      headerspacestyle.style.backgroundColor = '#FFFFFF';
+      bstyle.color = '#000000';
+      document.querySelectorAll("presentation-category").forEach(function(element) { element.style.color = '#313131'; });
+      document.querySelectorAll('.social-icons-btn').forEach(function(element) { element.style.backgroundColor = '#D2D2D2'; });
+      document.getElementById("st0").style.stroke = '#000000';
+      document.getElementById("st1").style.stroke = '#000000';
 
-  } else {
-    bstyle.backgroundColor = '#0E0E0E';
-    headertopstyle.style.backgroundColor = '#000000';
-    headerstyle.style.backgroundColor = '#000000';
-    headerspacestyle.style.backgroundColor = '#0E0E0E';
-    footer.style.backgroundColor = '#000000';
-    bstyle.color = '#FFFFFF';
-    document.querySelectorAll(".presentation-category").forEach(function(element) { element.style.color = '#FFFFFF'; });
-    document.querySelectorAll('.social-icons-btn').forEach(function(element) { element.style.backgroundColor = '#1A1A1A'; });
-    document.getElementById("st0").style.stroke = '#505050';
-    document.getElementById("st1").style.stroke = '#505050';
-  } 
-}
+    } else {
+      bstyle.backgroundColor = '#0E0E0E';
+      headertopstyle.style.backgroundColor = '#000000';
+      headerstyle.style.backgroundColor = '#000000';
+      headerspacestyle.style.backgroundColor = '#0E0E0E';
+      footer.style.backgroundColor = '#000000';
+      bstyle.color = '#FFFFFF';
+      document.querySelectorAll(".presentation-category").forEach(function(element) { element.style.color = '#FFFFFF'; });
+      document.querySelectorAll('.social-icons-btn').forEach(function(element) { element.style.backgroundColor = '#1A1A1A'; });
+      document.getElementById("st0").style.stroke = '#505050';
+      document.getElementById("st1").style.stroke = '#505050';
+    } 
+  }
 
-setInterval(updateBackground, 1000 * 60);
-updateBackground();
-</script>
+    setInterval(updateBackground, 1000 * 60);
+    updateBackground();
+  </script>
+
+  <!-- Modal JS --> 
+  <script>
+    const openEls = document.querySelectorAll("[data-open]");
+    const closeEls = document.querySelectorAll("[data-close]");
+    const isVisible = "is-visible";
+
+    for (const el of openEls) {
+      el.addEventListener("click", function() {
+        const modalId = this.dataset.open;
+        document.getElementById(modalId).classList.add(isVisible);
+      });
+    }
+
+    for (const el of closeEls) {
+      el.addEventListener("click", function() {
+        this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+      });
+    }
+
+    document.addEventListener("click", e => {
+      if (e.target == document.querySelector(".modal.is-visible")) {
+        document.querySelector(".modal.is-visible").classList.remove(isVisible);
+      }
+    });
+
+    document.addEventListener("keyup", e => {
+      // if we press the ESC
+      if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+        document.querySelector(".modal.is-visible").classList.remove(isVisible);
+      }
+    });
+  </script>
   
 </html>

@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# v1 01-01-2021
+ 
+CACHE:
+travel.html
+css1/travel.css
+js/.js
+/favicon.ico
+images/logo.png
+ 
+NETWORK:
+network.html
+ 
+FALLBACK:
+/ /offline.html
