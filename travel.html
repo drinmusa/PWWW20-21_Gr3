@@ -1608,5 +1608,19 @@
       }
     });
   </script>
+
+  <!-- Add NAV LINK ACTIVE CLASS FOR ACTIVE MENU PAGE -->
+  <script>
+    $(document).ready(function () {
+        var url = window.location.href;
+        let me = $('ul.nav-menu li .nav-link');
+        $(me).map(function(idx, elem) {
+          if(url.includes($(elem).attr("href"))){
+            $(elem).addClass("nav-link-active");
+          }
+        });
+      }
+    );
+  </script>
   
 </html>

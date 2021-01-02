@@ -691,3 +691,7 @@ video {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
 }
+
+.nav-link-active {
+    background-color: #79364b;
+}
