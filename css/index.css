@@ -240,6 +240,7 @@ body {
 Review from Clients  -- Start
 
 */
+
 .container > .title {
   display: flex;
   justify-content: center;
@@ -250,6 +251,9 @@ Review from Clients  -- Start
   flex-direction: row;
   justify-content: space-around;
 }
+#clientsReviews > .row {
+  margin-bottom: 25px;
+}
 .review {
   display: flex;
   max-width: 310px;
@@ -257,10 +261,26 @@ Review from Clients  -- Start
 .user {
   margin-right: 1rem;
 }
-.review-content > p {
+.review-content > .review-text {
+  color: #d2d2d2;
 }
-.review-content > h3 {
-  margin-top: -3px;
+.review-content > .reviewer-name {
+  margin-top: -2px;
+}
+#reviews {
+  width: 100%;
+  text-align: center;
+  border-bottom: 3px solid #d2d2d2;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+#reviews span {
+  background: #fff;
+  padding: 0 10px;
+}
+.reviewer-name {
+  color: #97455f;
 }
 
 /*Review from Clients -- End*/
