@@ -210,7 +210,6 @@ video {
 
 .main-footer {
     background-color: #EBEBEB;
-    text-align: center;
     padding: 22px 0px;
     border-top: 1px solid rgba(165, 165, 165, .5);
 }
@@ -598,31 +597,6 @@ video {
 .prev-button:hover, .next-button:hover{
     background-color: rgba(0,0,0,0.35);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .g-scrolling-carousel {
     position: relative;
 }
