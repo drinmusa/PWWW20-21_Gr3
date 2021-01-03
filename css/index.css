@@ -99,6 +99,9 @@ body {
 .social-btn #social-btn-expand:hover {
   cursor: pointer;
 }
+.social-btn #social-btn-expand i {
+  color: #ffffff;
+}
 .showhide {
   margin-top: -54px;
 }
