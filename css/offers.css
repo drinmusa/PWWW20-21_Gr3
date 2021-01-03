@@ -242,3 +242,17 @@ p {
     font-size: 25px;
     font-family: -webkit-pictograph;
 }
+
+#offer-message {
+  
+  display: grid;
+  grid-template-columns: 30% 50%;
+  justify-content: center;
+  padding: 100px 0;
+  margin: 0;
+}
+#message {
+  font-size: 100px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
