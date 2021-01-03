@@ -40,3 +40,13 @@ function showImg(e) {
   img[indexValue - 1].style.display = "block";
   slider[indexValue - 1].style.background = "#333";
 }
+
+$(document).ready(function () {
+  var url = window.location.href;
+  let me = $("ul.nav-menu li .nav-link");
+  $(me).map(function (idx, elem) {
+    if (url.includes($(elem).attr("href"))) {
+      $(elem).addClass("nav-link-active");
+    }
+  });
+});

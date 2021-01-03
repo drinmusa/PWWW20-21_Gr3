@@ -186,6 +186,9 @@ body {
 .search-btn:hover {
   background-color: #88394d;
 }
+.nav-link-active {
+  background-color: #79364b;
+}
 .main-footer {
   background-color: #ebebeb;
   padding: 22px 0px;

@@ -160,6 +160,9 @@ body {
   display: block;
   text-decoration: none;
 }
+.nav-link-active {
+  background-color: #79364b;
+}
 
 .search-input {
   background-color: #ffffff;
