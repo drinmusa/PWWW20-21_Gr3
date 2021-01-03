@@ -191,3 +191,31 @@ body {
   padding: 22px 0px;
   border-top: 1px solid #a5a5a5;
 }
+
+#grid-offers{
+  display: grid;
+  grid-template-columns: 35% 35%;
+  grid-template-rows: 450px 450px;
+  grid-gap: 5% 5%;
+  justify-content: center;
+}
+
+.offers{
+  border: 2px solid #88394d;
+  border-radius: 10px;
+}
+.offer-img{
+  height: 87%;
+}
+.offer-title{
+  background-color: #88394d;  
+  height: 13%;
+  border-radius: 6px;
+}
+.offer-title h3{
+  font-size: 25px;
+  color: white;
+  padding: 15 px;
+  margin: auto;
+  width: fit-content;
+}
