@@ -21,6 +21,7 @@ $(document).ready(function () {
     }
   });
 });
+
 function updateBackground() {
   var hr = new Date().getHours(),
     body = document.body,

@@ -90,7 +90,6 @@ function validatePhoneNumber() {
 
   if (!PHONE_REGEX_PATTERN.test(phoneNumber)) {
     alert("Phone number format not correct!");
-    location.replace("https://www.imaginative.netlify.app/index.html");
   } else {
     const name = document.getElementById("name").value;
     localStorage.setItem("Name", name);
