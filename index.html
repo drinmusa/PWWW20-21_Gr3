@@ -84,48 +84,43 @@
       <!-- Slide show  -->
       <section id="slide-show">
         <div class="container">
-          <div class="slider">
-            <div class="slides">
-              <input type="radio" name="radio-btn" id="radio1" />
-              <input type="radio" name="radio-btn" id="radio2" />
-              <input type="radio" name="radio-btn" id="radio3" />
-              <input type="radio" name="radio-btn" id="radio4" />
-              <input type="radio" name="radio-btn" id="radio5" />
-              <div class="slide">
-                <img src="./images/home_img/slide1.jpg" alt="Slide 1" />
+          <div class="slide-container">
+            <div class="content">
+              <div class="images">
+                <img
+                  class="slide-image"
+                  src="./images/home_img/slideshow-img/slide1.jpg"
+                />
+                <img
+                  class="slide-image"
+                  src="./images/home_img/slideshow-img/slide2.jpg"
+                />
+                <img
+                  class="slide-image"
+                  src="./images/home_img/slideshow-img/slide3.jpg"
+                />
+                <img
+                  class="slide-image"
+                  src="./images/home_img/slideshow-img/slide4.jpg"
+                />
+                <img
+                  class="slide-image"
+                  src="./images/home_img/slideshow-img/slide5.jpg"
+                />
               </div>
-              <div class="slide">
-                <img src="./images/home_img/slide2.jpg" alt="Slide 2" />
+              <div class="btm-slides">
+                <span onclick="btm_slide(1)"></span>
+                <span onclick="btm_slide(2)"></span>
+                <span onclick="btm_slide(3)"></span>
+                <span onclick="btm_slide(4)"></span>
+                <span onclick="btm_slide(5)"></span>
               </div>
-              <div class="slide">
-                <img src="./images/home_img/slide3.jpg" alt="Slide 3" />
-              </div>
-              <div class="slide">
-                <img src="./images/home_img/slide4.jpg" alt="Slide 4" />
-              </div>
-              <div class="slide">
-                <img src="./images/home_img/slide5.jpg" alt="Slide 5" />
-              </div>
-            </div>
-            <div class="slide-show-nav-auto">
-              <div class="auto-btn1"></div>
-              <div class="auto-btn2"></div>
-              <div class="auto-btn3"></div>
-              <div class="auto-btn4"></div>
-              <div class="auto-btn5"></div>
-            </div>
-            <div class="slide-show-nav">
-              <label for="radio1" class="dot"></label>
-              <label for="radio2" class="dot"></label>
-              <label for="radio3" class="dot"></label>
-              <label for="radio4" class="dot"></label>
-              <label for="radio5" class="dot"></label>
             </div>
           </div>
         </div>
       </section>
 
-      <!--Review from Clients Start-->
+      <!-- Review from Clients Start-->
       <section>
         <div class="container" id="clientsReviews">
           <div class="title">
@@ -251,8 +246,9 @@
           </div>
         </div>
       </section>
+      -->
       <!--Review from Clients End-->
-      <!-- Review from Experts -->
+      <!-- Magazine - CEO start -->
 
       <section>
         <div class="container" id="project">
@@ -309,6 +305,7 @@
           </div>
         </div>
       </section>
+      <!-- Magazine - CEO End-->
       <section>
         <!--Banner section start-->
         <div class="container">
@@ -413,6 +410,7 @@
         </div>
       </div>
     </aside>
+    -->
     <footer class="main-footer">
       <div class="container">
         Copyright &copy; 2020 - All rights reserved - Imaginative
@@ -425,21 +423,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/script.js"></script>
-    <!-- SOCIAL TOP BUTTON HIDE/SHOW -->
-    <!-- <script type="text/javascript">
-      // $(document).ready(function () {
-      //   $("#social-btn-expand").click(function () {
-      //     if ($("#social-top").hasClass("showhide")) {
-      //       $("#social-top").removeClass("showhide");
-      //       $("#social-icon").removeClass("fa-plus");
-      //       $("#social-top-content").toggle();
-      //     } else {
-      //       $("#social-top").addClass("showhide");
-      //       $("#social-icon").addClass("fa-plus");
-      //       $("#social-top-content").toggle();
-      //     }
-      //   });
-      // });
-    </script> -->
   </body>
 </html>
