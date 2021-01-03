@@ -208,31 +208,31 @@ body {
   justify-content: center;
   width: 550px;
 }
-label {
+#main-form > label {
   font-size: 16px;
   margin-bottom: 10px;
 }
-input {
+#main-form > input {
   height: 33px;
   margin-bottom: 15px;
 }
-.required {
+#main-form > .required {
   color: red;
 }
-::placeholder {
+#main-form > input::placeholder {
   font-size: 14px;
 }
-input,
-textarea {
+#main-form > input,
+#main-form > textarea {
   width: 50%;
 }
-input:focus,
-textarea:focus {
+#main-from > input:focus,
+#main-form > textarea:focus {
   outline: none !important;
   border: 1px solid #97455e;
   box-shadow: 0 0 10px #97445e;
 }
-#sendMessage {
+#main-form > #sendMessage {
   margin-top: 10px;
   width: 20%;
   color: #fff;
