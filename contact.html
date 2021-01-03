@@ -72,139 +72,64 @@
             <li class="nav-item">
               <a href="travel.html" class="nav-link"> TRAVEL </a>
             </li>
-           
 
             <li class="nav-item">
               <a href="contact.html" class="nav-link">CONTACT</a>
             </li>
           </ul>
         </nav>
+        <div class="header-space"></div>
       </div>
     </header>
 
     <main>
-     <section>
-      <div class="container">
-        <h1>Imaginative has its office on main cities around the country</h1>
-        <div class="contact-form">
-          <form action="/" id="mainForm">
-            <div class="row">
-              <div class="right">
+      <section>
+        <div class="container">
+          <div class="contact-container">
+            <form action="/" id="main-form">
+              <label for="name"><span class="required">* </span> Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+              />
 
-                <label for="name">Name:</label>
-              </div>
-              <div class="left">
-
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-            </div>
-           <div class="row">
-            <div class="left">
-
-              <label for="email">Email:</label>
-  
-            </div>
-            <div class="right">
-
+              <label for="name"><span class="required">* </span>Email:</label>
               <input
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Enter your email"
+                placeholder="Email"
                 required
               />
-            </div>
-           </div>
-            <div class="row">
 
-              <label for="reason">Reason:</label>
-              <select name="reason" id="reason">
-                <option value="">Requesting additional info</option>
-                <option value="">Complaint</option>
-                <option value="">Suggestion</option>
-              </select>
-            </div>
-            <div class="row">
-              <label for="phone">Phone:</label>
-              <input type="text" placeholder="Enter your phone number" />
-            </div>
-          <div class="row">
-            <label for="message">Message:</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="5"
-            ></textarea>
-          </div>
-<div class="row">
+              <label for="name">Phone:</label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Phone"
+                required
+              />
 
-  <div class="compliance">
-    <input type="checkbox" /> I consent to my data being used for
-    better experience.
-  </div>
-</div>
-<div class="row">
-
-  <input type="submit" value="Send Message" />
-</div>
-          </form>
-        </div>
-      </div>
-      </section>
-      <section>
-        <div class="container">
-        <div class="locations">
-          <div class="location">
-            <div class="location-info">
-              <h3 class="location-city">Office in Prishtina</h3>
-              <div class="location-contact">
-                
-              </div>
-            </div>
+              <label for="message"
+                ><span class="required">* </span>Message:</label
+              >
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <p class="required">Fields marked with * are required!</p>
+              <input type="submit" value="Submit" id="sendMessage" />
+            </form>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.9740207080004!2d21.160359315008378!3d42.66190592397907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee0de37631f%3A0xb0c65bf8ad2fcbcc!2zU2hlc2hpIE7Dq27DqyBUZXJlemE!5e0!3m2!1sen!2s!4v1605965841813!5m2!1sen!2s"
-              width="600"
-              height="450"
-              frameborder="0"
-              style="border: 0"
-              allowfullscreen=""
-              aria-hidden="false"
-              tabindex="0"
-            ></iframe>
-          
-          </div>
-          <div class="location">
-            <div class="location-info">
-              <h3 class="location-city">Office in Ferizaj</h3>
-              <div class="location-contact"></div>
-            </div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.9740207080004!2d21.160359315008378!3d42.66190592397907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee0de37631f%3A0xb0c65bf8ad2fcbcc!2zU2hlc2hpIE7Dq27DqyBUZXJlemE!5e0!3m2!1sen!2s!4v1605965841813!5m2!1sen!2s"
-              width="600"
-              height="450"
-              frameborder="0"
-              style="border: 0"
-              allowfullscreen=""
-              aria-hidden="false"
-              tabindex="0"
-            ></iframe>
-           
-          </div>
-          <div class="location">
-            <div class="location-info">
-              <h3 class="location-city">Office in Prizren</h3>
-              <div class="location-contact"></div>
-            </div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.9740207080004!2d21.160359315008378!3d42.66190592397907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee0de37631f%3A0xb0c65bf8ad2fcbcc!2zU2hlc2hpIE7Dq27DqyBUZXJlemE!5e0!3m2!1sen!2s!4v1605965841813!5m2!1sen!2s"
-              width="600"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.8152750120616!2d21.113525914884175!3d42.64407592511152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549e6ddd78afcb%3A0x190eed2d3d1e914c!2zTsOrbsOrIFRlcmV6YSwgUHJpc2h0aW7Dqw!5e0!3m2!1sen!2s!4v1609686766798!5m2!1sen!2s"
+              width="550"
               height="450"
               frameborder="0"
               style="border: 0"
@@ -214,9 +139,7 @@
             ></iframe>
           </div>
         </div>
-      </div>
       </section>
-      </div>
     </main>
     <footer class="main-footer">
       <div class="container">

@@ -196,34 +196,51 @@ body {
 }
 /* Main Contact form -- Start */
 
-#mainForm {
-  display: flex;
-  flex-direction: column;
-}
-.row {
+.contact-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin-top: 25px;
 }
-
-.row > label,
-input,
-select,
-textarea {
+#main-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 550px;
+}
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+input {
+  height: 33px;
   margin-bottom: 15px;
-  padding: 5px;
-  font-size: 1.1rem;
+}
+.required {
+  color: red;
+}
+::placeholder {
+  font-size: 14px;
+}
+input,
+textarea {
+  width: 50%;
+}
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border: 1px solid #97455e;
+  box-shadow: 0 0 10px #97445e;
+}
+#sendMessage {
+  margin-top: 10px;
+  width: 20%;
+  color: #fff;
+  background-color: #97445e;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
 /*Main Contact form -- End*/
-/* Locations section -- Start */
-.locations {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.location {
-  display: flex;
-  margin-bottom: 25px;
-}
-/* Locations section -- End */
