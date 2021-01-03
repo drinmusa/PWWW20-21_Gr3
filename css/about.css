@@ -192,5 +192,35 @@ body {
 .main-footer {
   background-color: #ebebeb;
   padding: 22px 0px;
-  border-top: 1px solid #a5a5a5;
+  text-align: center;
+
+}
+#intro h1 {
+  font-family::'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  color: #6c757d;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+#intro p {
+  padding: 0 10px 30px 10px;
+  text-align: center;
+}
+#intro-quote {
+  background-color: #ebebeb;
+  display: grid;
+  grid-template-columns: 35% 50%;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+#quote {
+  font-size: 50px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.description p {
+  font-size: 15px;
+  font-family: -webkit-pictograph;
 }

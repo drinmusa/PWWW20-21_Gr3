@@ -193,6 +193,7 @@ body {
   background-color: #ebebeb;
   padding: 22px 0px;
   border-top: 1px solid #a5a5a5;
+  text-align: center;
 }
 #offers-2021 {
   margin-bottom: 50px;
@@ -236,4 +237,8 @@ body {
   border-top-right-radius: 2%;
   width: 100%;
   height: 100%;
+}
+p {
+    font-size: 25px;
+    font-family: -webkit-pictograph;
 }
