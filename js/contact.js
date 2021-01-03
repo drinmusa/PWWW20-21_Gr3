@@ -84,3 +84,11 @@ function updateBackground() {
 
 setInterval(updateBackground, 1000 * 60);
 updateBackground();
+function validatePhoneNumber() {
+  const phoneNumber = document.getElementById("phone").value;
+  const PHONE_REGEX_PATTERN = /^[+][/0-9]{8,12}$/gm;
+
+  if (!PHONE_REGEX_PATTERN.test(phoneNumber)) {
+    alert("Phone number format not correct!");
+  }
+}
