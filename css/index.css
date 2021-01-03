@@ -285,31 +285,41 @@ Review from Clients  -- Start
 
 /*Review from Clients -- End*/
 /*Banner --Start */
+
 #banner {
   display: flex;
   background-color: #97455f;
   color: white;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border-radius: 10px;
+  margin: 40px 0 45px 0;
 }
 #banner-text {
-  flex-grow: 3;
-  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 25px;
+  font-family: Georgia Pro, "Times New Roman", Times, serif;
 }
 #banner-button {
-  margin-right: 5rem;
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
 }
 #banner-text > h2 {
   margin-bottom: -0.2rem;
   font-size: 2rem;
 }
+#banner-text > p {
+  font-size: 18px;
+  margin-top: -2px;
+}
 #banner-button > #contact-button {
-  margin-top: 21.5px;
-  margin-right: 5rem;
   font-size: 2.5rem;
-
+  font-family: Georgia Pro, "Times New Roman", Times, serif;
   color: #97455f;
   border-radius: 10px;
+  border: 1px solid #ffffff;
   box-shadow: 0;
 }
 
